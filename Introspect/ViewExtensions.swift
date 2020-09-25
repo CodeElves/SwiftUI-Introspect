@@ -75,6 +75,11 @@ extension View {
         return introspect(selector: TargetViewSelector.ancestorOrSibling, customize: customize)
     }
     
+    /// Finds a `UITableViewCell` from a `SwiftUI.List`
+    public func introspectTableViewCell(customize: @escaping (UITableViewCell) -> ()) -> some View {
+        return introspect(selector: TargetViewSelector.ancestorOrSibling, customize: customize)
+    }
+    
     /// Finds a `UIScrollView` from a `SwiftUI.ScrollView`, or `SwiftUI.ScrollView` child.
     public func introspectScrollView(customize: @escaping (UIScrollView) -> ()) -> some View {
         return introspect(selector: TargetViewSelector.ancestorOrSibling, customize: customize)
